@@ -31,8 +31,8 @@ preorder= [10 20 40 50 30 60]
         /  \    /
       40    50 60
 4) elements in right side ->
-    1st -> root
-    preOrder+1 -> left start
+    1st -> root = preOrder[0]
+    preOrder[0] + 1 -> leftSide start
     after leftTree finishes -> right start
     SO , rightStart = 1 + preStart + leftTreeSize
 
