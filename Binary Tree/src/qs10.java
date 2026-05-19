@@ -37,6 +37,59 @@ preorder= [10 20 40 50 30 60]
     SO , rightStart = 1 + preStart + leftTreeSize
 
 
+
+
+
+
+
+inorder = [40 20 50 10 60 30]
+           is             ie
+preorder= [10 20 40 50 30 60]
+           ps             pe
+          root
+           |
+           |----> find this root in inOrder
+
+
+    ........... LEFT ................................................
+
+inorder = [40 20 50 10 60 30]
+           is       |     ie
+                    |_ _ _ _->rootIdx
+          <------->
+          left tree = is to rootIdx-1  -> leftTreeSize
+
+preorder= [10 20 40 50 30 60]
+           ps             pe
+          root
+              <------>
+              left tree -> stIdx= rootIdx+1 (ps+1)
+                           endIdx= ps + leftTreeSize
+
+
+    ........... RIGHT ................................................
+
+inorder = [40 20 50 10 60 30]
+           is       |     ie
+                    |_ _ _ _->rootIdx
+                       <---->
+                         right tree = stIdx = rootIdx + 1
+
+preorder= [10 20 40 50 30 60]
+           ps             pe
+          root
+              <------> <---->
+               left     right tree -> stIdx= rootIdx + leftTreeSize + 1
+
+
+
+        10
+       /  \
+     20    30
+    /  \    /
+   40  50  60
+
+
 -----------------------------------------------------------
 
 1) postOrder -> last ele = root
