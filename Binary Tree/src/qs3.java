@@ -13,9 +13,9 @@ public class qs3 {
              4     9
             / \   / \
            5   6 10 11
----------->
+          st <---------
           |
-    <-----|
+          |-------->
 
 1) Left boundary excluding leaf
     (if left == null --> go to right)
@@ -57,6 +57,7 @@ traverse the tree and if leaf node then add in queue
 
 
 RIGHT BOUNDARY TRAVERSAL
+-> add in right queue
 go to right of root
 | 7 |
 if right exist add in queue
